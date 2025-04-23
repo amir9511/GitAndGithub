@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Questions and Answers</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         :root {
             --bg-color: #fff8f0;
@@ -18,11 +20,12 @@
         }
 
         h1 {
-            color: var(--heading-color);
+            
+            color: var(--subheading-color);
         }
 
-        h2 {
-            color: var(--subheading-color);
+        h2, i {
+            color: var(--heading-color);
         }
 
         p {
@@ -50,14 +53,24 @@
 
     <h1 class="allcenter">Questions and Answers</h1>
 
-    <h2 class="inline">git version ? --&gt; </h2>
-    <p class="inline ps-3">git -v</p>
+    <h2 class="inline">git version ? <i class="fa-solid fa-arrow-right ps-3"></i> <span class="ps-3">git -v</span></h2>  
 
-    <h2>Q2: What is a paragraph in HTML?</h2>
-    <p>A paragraph in HTML is defined with the </p>
+    <h2>
+        git config --global user.email "taro@email.com"
+        git config --global user.name "Taro Naam"
+        </h2>
+    <p>ek file mate <i class="fa-solid fa-arrow-right ps-3"></i> <span class="ps-3"></span> git add . </p>
 
     <h2>Q3: How do you create a heading in HTML?</h2>
     <p>You can create a heading in HTML using the </p>
 
 </body>
+<script>
+  const h2Style = getComputedStyle(document.querySelector("h2"));
+
+  document.querySelectorAll("p, i").forEach(el => {
+    el.style.fontSize = h2Style.fontSize;
+    el.style.fontWeight = h2Style.fontWeight;
+  });
+</script>
 </html>
