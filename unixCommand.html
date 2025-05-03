@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions and Answers</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4f4f9;
+            --heading-color: #34495e;  
+            --subheading-color: #c0392b; 
+            --text-color: #333333;
+            --highlight-color: #1abc9c;
+        }
+
+        li{
+            line-height: 3rem;
+        }
+        body {
+            background-color: var(--bg-color);
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1, .extra-higlite, li, li i, span, i::before {
+            
+            color: var(--subheading-color);
+        }
+
+        h2, i {
+            color: var(--heading-color);
+        }
+
+        p {
+            color: var(--text-color);
+            font-size: 18px;
+        }
+
+        .allcenter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+        }
+
+        .inline{
+            display: inline;
+        }
+
+        .ps-3{
+            padding-left: 15px ;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="allcenter">Questions and Answers</h1>
+
+    <h2>Jab tame <span>"pwd"</span>  lakho, to output ma tamne current working folder no path madse<i class="fa-solid fa-arrow-right ps-3"></i> <span class="ps-3"></span>pwd</h2>
+
+    <h2>Jab tame <span>"ls"</span> lakho PowerShell (ya Git Bash) ma, to tame je folder ma cho, ena andar ni badhi files ane folders ni list dekhashe.<i class="fa-solid fa-arrow-right ps-3"></i> <span class="ps-3"></span>ls</h2>
+
+    <h2>Jab tame <span>"ls"</span> lakho PowerShell (ya Git Bash) ma, to tame je folder ma cho, ena andar ni badhi files ane folders ni list dekhashe.<i class="fa-solid fa-arrow-right ps-3"></i> <span class="ps-3"></span>ls</h2>
+
+    <h2>New File<i class="fa-solid fa-arrow-right ps-3"></i> <span class="ps-3"></span>New-Item <span>"File name"</span> -ItemType File</h2>
+
+    <h2>New Folder<i class="fa-solid fa-arrow-right ps-3"></i> <span class="ps-3"></span>New-Item -ItemType <span>"Folder Name"</span>-Name logs</h2>
+    
+</body>
+<script>
+  const h2Style = getComputedStyle(document.querySelector("h2, ul"));
+
+  document.querySelectorAll("p, i, ul").forEach(el => {
+    el.style.fontSize = h2Style.fontSize;
+    el.style.fontWeight = h2Style.fontWeight;
+  });
+</script>
+</html>
